@@ -1,0 +1,38 @@
+<html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+<body>
+<title>WeatherBackend</title>
+<header>Testing Testing...</header>
+<p><a href="#" onclick="requestjQuery()">Test</a></P>
+</body>
+<script>
+let string = prompt();
+    let weatherAPI="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?"+
+                        'aggregateHours=24&locationMode=single&contentType=json&unitGroup=us&key=AA89H5V6JGJCWZQ38G6MLE4B2&locations='+string;
+    function requestjQuery() {
+        $.get(weatherAPI) .done(function(rawResponse) {
+            testWeatherToConsole(rawResponse);
+        })
+        .fail(function() {
+            console.log("debug message: jQuery failed");
+        });
+    }
+    function testWeatherToConsole(response) {
+        if (!response) {
+            console.log("debug message: weatherAPI failed");
+            return;
+        }
+        if (response.errorCode>0) {
+            console.log(response.errorCode+response.message);
+            return;
+        }
+        let location=response.location;
+        let values=response.location.values;
+        console.log("Location: "+location.address);
+        for (let i=0;i<values.length;i++) {
+            console.log(values[i].datetimeStr+": maxt="+values[i].maxt+", mint="+values[i].mint,"current",+values[i].current);
+        }
+    }
+</script>
+</html>
