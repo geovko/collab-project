@@ -9,7 +9,7 @@
 <script>
 let string = prompt();
     let weatherAPI="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?"+
-                        'aggregateHours=24&locationMode=single&contentType=json&unitGroup=us&key=AA89H5V6JGJCWZQ38G6MLE4B2&locations='+string;
+                        'aggregateHours=24&locationMode=single&contentType=json&unitGroup=us&current&key=AA89H5V6JGJCWZQ38G6MLE4B2&locations='+string;
     function requestjQuery() {
         $.get(weatherAPI) .done(function(rawResponse) {
             testWeatherToConsole(rawResponse);
@@ -31,7 +31,7 @@ let string = prompt();
         let values=response.location.values;
         console.log("Location: "+location.address);
         for (let i=0;i<values.length;i++) {
-            console.log(values[i].datetimeStr+": maxt="+values[i].maxt+", mint="+values[i].mint,"current",+values[i].current);
+            console.log(values[i].datetimeStr+": maxt="+values[i].maxt+", mint="+values[i].mint,"DewPoint",+values[i].dew,"Rain",+values[i].precip);
         }
     }
 </script>
