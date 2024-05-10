@@ -1,6 +1,6 @@
 
   /* Center booking details box */
-  .booking-form {
+  .booking__form {
     box-sizing: border-box;
     padding: 3em 3em;
     background: rgba(0, 0, 0, 0.78);
@@ -32,7 +32,7 @@
     clear: both;
   }
   
-  .booking-form {
+  .booking__form {
     box-sizing: border-box;
     padding: 3em 3em;
     background: rgba(0, 0, 0, 0.78);
@@ -41,8 +41,8 @@
     margin-top: 10%;
   }
   
-  h2.sub-heading,
-  h3.sub-heading {
+  h2.sub__heading,
+  h3.sub__heading {
     display: inline-block;
     text-align: left;
     font-size: 24px;
@@ -56,12 +56,12 @@
     font-family: "Montserrat", sans-serif;
   }
   
-  .radio-section {
+  .radio__section {
     text-align: left;
     margin: 0.7em 0;
   }
   
-  .radio-section h6 {
+  .radio__section h6 {
     display: inline;
     margin-top: 10px;
     color: #0091cd;
@@ -73,15 +73,15 @@
     font-family: "Montserrat", sans-serif;
   }
   
-  .radio-section ul {
+  .radio__section ul {
     display: inline;
   }
   
-  .radio-buttons li input[type="radio"] {
+  .radio__buttons li input[type="radio"] {
     cursor: pointer;
   }
   
-  .radio-buttons li label {
+  .radio__buttons li label {
     color: #fff;
     font-size: 13.5px;
     font-weight: 400;
@@ -89,9 +89,9 @@
     font-family: "Montserrat", sans-serif;
   }
   
-  .booking-form input[type="text"],
-  .booking-form input[type="email"],
-  .booking-form textarea,
+  .booking__form input[type="text"],
+  .booking__form input[type="email"],
+  .booking__form textarea,
   select.form-control,
   input#datepicker {
     width: 100%;
@@ -108,25 +108,25 @@
     font-family: "Montserrat", sans-serif;
   }
   
-  .booking-form textarea {
+  .booking__form textarea {
     resize: none;
     height: 80px;
   }
   
-  .field-info {
+  .field__info {
     margin-bottom: 1em;
   }
   
-  .form-text {
+  .form__text {
     width: 100%;
   }
   
-  select.form-control option {
+  select.form__control option {
     background: #000;
   }
   
-  .booking-form input[type="submit"],
-  .booking-form input[type="reset"] {
+  .booking__form input[type="submit"],
+  .booking__form input[type="reset"] {
     text-transform: capitalize;
     background: hsla(0, 0%, 100%, .2);
     color: hsl(0, 0%, 95%);
@@ -145,37 +145,37 @@
     font-family: "Montserrat", sans-serif;
   }
   
-  .booking-form input[type="submit"] {
+  .booking__form input[type="submit"] {
     margin-right: 1.5em;
     background: hsla(0, 0%, 100%, .2);
     color: hsl(0, 0%, 95%);
   }
   
-  .booking-form input[type="submit"]:hover {
+  .booking__form input[type="submit"]:hover {
     transform: translateX(.25rem);
   }
   
-  .booking-form input[type="reset"]:hover {
+  .booking__form input[type="reset"]:hover {
     transform: translateX(.25rem);
   }
   
-  .booking-form ::-webkit-input-placeholder {
+  .booking__form ::-webkit-input-placeholder {
     color: #fff;
   }
   
-  .booking-form :-moz-placeholder {
+  .booking__form :-moz-placeholder {
     color: #fff;
   }
   
-  .booking-form ::-moz-placeholder {
+  .booking__form ::-moz-placeholder {
     color: #fff;
   }
   
-  .booking-form :-ms-input-placeholder {
+  .booking__form :-ms-input-placeholder {
     color: #fff;
   }
   
-  .booking-form label {
+  .booking__form label {
     font-size: 13.5px;
     color: rgba(255, 255, 255, 0.83);
     letter-spacing: 2px;
@@ -186,125 +186,125 @@
     text-transform: capitalize;
   }
   
-  ul.radio-buttons li {
+  ul.radio__buttons li {
     display: inline-block;
     margin: 0em 2em;
   }
   
   @media (max-width: 1440px) {
-    .booking-form {
+    .booking__form {
       width: 73%;
     }
   }
   
   @media (max-width: 1366px) {
-    .booking-form {
+    .booking__form {
       width: 75%;
     }
   }
   
   @media (max-width: 1280px) {
-    .booking-form {
+    .booking__form {
       width: 80%;
     }
   }
   
   @media (max-width: 1080px) {
-    .booking-form {
+    .booking__form {
       width: 83%;
       padding: 2em 2.2em;
     }
   }
   
   @media (max-width: 1024px) {
-    h2.sub-heading,
-    h3.sub-heading {
+    h2.sub__heading,
+    h3.sub__heading {
       font-size: 22px;
       padding: 0px 20px 7px 0px;
     }
     .field-info {
       margin-bottom: 0.8em;
     }
-    .booking-form input[type="submit"],
-    .booking-form input[type="reset"] {
+    .booking__form input[type="submit"],
+    .booking__form input[type="reset"] {
       padding: 0.5em 3em;
       font-size: 1.1em;
     }
   }
   
   @media (max-width: 768px) {
-    h2.sub-heading,
-    h3.sub-heading {
+    h2.sub__heading,
+    h3.sub__heading {
       font-size: 21px;
       padding: 0px 15px 7px 0px;
     }
-    .radio-section h6 {
+    .radio__section h6 {
       font-size: 17px;
       letter-spacing: 1.5px;
     }
-    ul.radio-buttons li {
+    ul.radio__buttons li {
       margin: 0em 1em;
     }
   }
   
   @media (max-width: 667px) {
-    h2.sub-heading,
-    h3.sub-heading {
+    h2.sub__heading,
+    h3.sub__heading {
       font-size: 19px;
       letter-spacing: 1.5px;
     }
-    .booking-form {
+    .booking__form {
       width: 86%;
       padding: 2em 2em;
     }
-    .booking-form input[type="text"],
-    .booking-form input[type="email"],
-    .booking-form textarea,
-    select.form-control,
+    .booking__form input[type="text"],
+    .booking__form input[type="email"],
+    .booking__form textarea,
+    select.form__control,
     input#datepicker {
       padding: 8px 10px;
     }
-    .field-info {
+    .field__info {
       margin-bottom: 0.9em;
     }
-    h2.sub-heading,
-    h3.sub-heading {
+    h2.sub__heading,
+    h3.sub__heading {
       margin-bottom: 0.6em;
     }
   }
   
   @media (max-width: 640px) {
-    .booking-form input[type="submit"] {
+    .booking__form input[type="submit"] {
       margin-right: 0.7em;
     }
   }
   
   @media (max-width: 600px) {
-    .booking-form {
+    .booking__form {
       width: 90%;
     }
-    .booking-form input[type="submit"],
-    .booking-form input[type="reset"] {
+    .booking__form input[type="submit"],
+    .booking__form input[type="reset"] {
       padding: 0.5em 2em;
     }
   }
   
   @media (min-width: 481px) {
-    .main-flex {
+    .main__flex {
       display: -webkit-flex;
       display: flex;
       -webkit-justify-content: space-between;
       justify-content: space-between;
     }
-    .form-text1,
-    .form-text2 {
+    .form__text1,
+    .form__text2 {
       flex-basis: 48.5%;
       -webkit-flex-basis: 48.5%;
     }
   }
   
   @media (min-width: 737px) {
-    .triple-wthree {
+    .triple__three {
       display: -webkit-flex;
       display: flex;
       -webkit-justify-content: space-between;
@@ -313,61 +313,60 @@
   }
   
   @media (max-width: 480px) {
-    ul.radio-buttons li {
+    ul.radio__buttons li {
       margin: 0em 0.5em;
     }
-    .radio-section {
+    .radio__section {
       margin: 1.3em 0 0.7em;
     }
-    .booking-form {
+    .booking__form {
       width: 85%;
     }
-    ul.radio-buttons li {
+    ul.radio__buttons li {
       margin: 1em 0em 0em 0.2em;
       display: block;
     }
-    .booking-form input[type="submit"],
-    .booking-form input[type="reset"] {
+    .booking__form input[type="submit"],
+    .booking__form input[type="reset"] {
       font-size: 1em;
     }
-    .booking-form textarea {
+    .booking__form textarea {
       height: 60px;
     }
-    .radio-section {
+    .radio__section {
       margin: 1em 0 0.7em;
     }
   }
   
   @media (max-width: 414px) {
-    .booking-form {
+    .booking__form {
       width: 90%;
     }
-    .booking-form {
+    .booking__form {
       width: 90%;
       padding: 1.5em 1.7em;
     }
   }
   
   @media (max-width: 384px) {
-    .booking-form input[type="submit"],
-    .booking-form input[type="reset"] {
+    .booking__form input[type="submit"],
+    .booking__form input[type="reset"] {
       float: none;
     }
-    .booking-form input[type="submit"] {
+    .booking__form input[type="submit"] {
       margin-right: 0em;
     }
   }
   
   @media (max-width: 320px) {
-    .booking-form {
+    .booking__form {
       width: 93%;
       padding: 1.3em 1.5em;
     }
-    h2.sub-heading,
-    h3.sub-heading {
+    h2.sub__heading,
+    h3.sub__heading {
       font-size: 18px;
       letter-spacing: 1.4px;
       padding: 0px 12px 5px 0px;
     }
   }
-  

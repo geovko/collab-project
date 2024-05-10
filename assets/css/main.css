@@ -421,6 +421,20 @@ img {
   row-gap: 2.5rem;
 }
 
+.weather__form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.weather__input {
+  padding: 1.25rem 1rem;
+  background-color: var(--container-color);
+}
+
+.weather__button {
+  cursor: pointer;
+}
+
 /*=============== JOIN ===============*/
 .join__container {
   row-gap: 3rem;
@@ -634,7 +648,7 @@ img {
     text-align: initial;
   }
 
-  .popular__container {
+  .flight__container {
     grid-template-columns: repeat(2, 240px);
   }
 
@@ -669,7 +683,7 @@ img {
     column-gap: 4rem;
   }
 
-  .popular__container {
+  .flight__container {
     grid-template-columns: repeat(3, 240px);
   }
 
@@ -739,15 +753,15 @@ img {
     width: 460px;
   }
 
-  .popular__container {
+  .flight__container {
     grid-template-columns: repeat(3, 300px);
     column-gap: 3rem;
     padding-top: 4rem;
   }
-  .popular__title {
+  .flight__title {
     font-size: var(--h2-font-size);
   }
-  .popular__location {
+  .flight__location {
     font-size: var(--normal-font-size);
   }
 
