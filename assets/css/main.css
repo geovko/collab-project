@@ -421,6 +421,20 @@ img {
   row-gap: 2.5rem;
 }
 
+.weather__form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.weather__input {
+  padding: 1.25rem 1rem;
+  background-color: var(--container-color);
+}
+
+.weather__button {
+  cursor: pointer;
+}
+
 /*=============== JOIN ===============*/
 .join__container {
   row-gap: 3rem;

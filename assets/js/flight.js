@@ -31,5 +31,71 @@ const optionsTwo = {
   fields: ["address_components", "geometry", "icon", "name"],
   strictBounds: false,
 };
-const autocompleteTwo = new google.maps.places.Autocomplete(inputTwo, options);
+const autocompleteTwo = new google.maps.places.Autocomplete(inputTwo, optionsTwo);
 //============GOOGLE AUTOCOMPLETE END=============//
+
+/*=============== DATE PICKER WIDGET ===============*/
+$(function () {
+  $('#datepicker').datepicker({
+    dateFormat: 'yy-mm-dd', // Example date format
+    minDate: 0, // Set minimum date to today
+    // Add more options as needed
+  });
+});
+
+$(function () {
+  $('#datepicker1').datepicker({
+    dateFormat: 'yy-mm-dd',
+    minDate: 0,
+    // Add more options as needed
+  });
+});
+
+// Form submission event listener
+document.getElementById('submitForm').addEventListener('click', function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get form data
+  const fromLocation = document.getElementById('startLocation').value;
+  const toLocation = document.getElementById('endLocation').value;
+  const departureDate = document.getElementById('datepicker').value;
+  const returnDate = document.getElementById('datepicker1').value;
+
+  // Check if any of the form fields are empty
+  if (fromLocation.trim() === '' || toLocation.trim() === '' || departureDate.trim() === '') {
+    // If any of the fields are empty, show an alert or other message to remind the user to fill in all fields
+    alert('Please fill in all required fields.');
+    return; // Exit the function without proceeding to the redirection
+  }
+
+  // If all fields are filled, proceed with storing data in localStorage and redirecting to the result page
+  localStorage.setItem('searchInfo', JSON.stringify({
+    fromLocation,
+    toLocation,
+    departureDate,
+    returnDate,
+  }));
+
+  // Redirect to result page
+  window.location.href = 'flight.html';
+});
+
+// Add an event listener to radio buttons
+const oneWayOption = document.getElementById('a-option');
+const roundTripOption = document.getElementById('b-option');
+const returnDateInput = document.getElementById('datepicker1');
+
+oneWayOption.addEventListener('change', function() {
+  if (oneWayOption.checked) {
+    returnDateInput.disabled = true; // Disable return date input
+    returnDateInput.value = ''; // Clear return date input value
+  }
+});
+
+roundTripOption.addEventListener('change', function() {
+  if (roundTripOption.checked) {
+    returnDateInput.disabled = false; // Enable return date input
+  }
+});
+
