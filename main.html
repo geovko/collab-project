@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <!--===============jQuery==============-->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/flight.css">
+        <link rel="stylesheet" href="assets/css/weather.css">
+        <title>SkyWatch</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo" target="_blank">SkyWatch</a>
+                <div class="nav__menu" id="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#flights" class="nav__link">Flights</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#weather" class="nav__link">Weather</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#join" class="nav__link">Join</a>
+                        </li>
+                    </ul>
+                    <!-- Close button -->
+                    <div class="nav__close" id="nav__close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav__toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <img src="assets/img/home-bg.jpg" alt="home image" class="home__bg">
+                <div class="home__shadow"></div>
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <h3 class="home__subtitle">
+                            Welcome To SkyWatch
+                        </h3>
+                        <h1 class="home__title">
+                            Explore <br>
+                            The World
+                        </h1>
+                        <p class="home__description">
+                            Make informed decisions, adapt seamlessly to changes, and ensure 
+                            a smoother, more enjoyable travel experience. 
+                        </p>
+                        <a href="#flights" class="button">
+                            Start Your Journey <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                    <div class="home__cards grid">
+                        <article class="home__card">
+                            <a href="https://www.google.com/search?q=places+to+travel+in+south+korea">
+                                <img src="assets/img/korea.jpg" alt="home image" class="home__card-img">  
+                                <h3 class="home__card-title">Korea</h3>
+                                <div class="home__card-shadow"></div>
+                            </a>
+                        </article>
+                        <article class="home__card">
+                            <a href="https://www.google.com/search?q=places+to+travel+in+norway">
+                                <img src="assets/img/norway.jpg" alt="home image" class="home__card-img">
+                                <h3 class="home__card-title">Norway</h3>
+                                <div class="home__card-shadow"></div>
+                            </a>
+                        </article>
+                        <article class="home__card">
+                            <a href="https://www.google.com/search?q=places+to+travel+in+uae">
+                                <img src="assets/img/uae.jpg" alt="home image" class="home__card-img">
+                                <h3 class="home__card-title">UAE</h3>
+                                <div class="home__card-shadow"></div>
+                            </a>
+                        </article>
+                        <article class="home__card">
+                            <a href="https://www.google.com/search?q=places+to+travel+in+spain">
+                                <img src="assets/img/spain.jpg" alt="home image" class="home__card-img">
+                                <h3 class="home__card-title">Spain</h3>
+                                <div class="home__card-shadow"></div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__container container grid">
+               <div class="about__data">
+                  <h2 class="section__title">
+                     Learn More <br>
+                     About SkyWatch
+                  </h2>
+                  <p class="about__description">
+                     SkyWatch is a comprehensive web application 
+                     tailored to enhance the travel planning experience 
+                     for users worldwide. By seamlessly integrating 
+                     real-time flight tracking and detailed airport 
+                     weather updates, SkyWatch empowers travelers with 
+                     the information they need to make informed decisions
+                      and navigate their journeys with confidence.
+                  </p>
+               </div>
+               <div class="about__image">
+                  <img src="assets/img/about.jpg" alt="about image" class="about__img">
+                  <div class="about__shadow"></div>
+               </div>
+            </div>
+         </section>
+         <!--==================== FLIGHTS ====================-->
+            <section class="flights section" id="flights">
+            <h2 class="section__title">
+               Search For Your <br>
+               Next Destination
+            </h2>
+            <div class="booking__form">
+               <form action="#" method="post">
+                 <h2 class="sub__heading">Booking Details</h2>
+                 <div class="main__flex">
+                   <div class="field__info form__text1">
+                     <input id="startLocation" type="text" name="from" placeholder="From" required="">
+                   </div>
+                   <div class="field__info form__text2">
+                     <input id="endLocation" type="text" name="to" placeholder="To" required="">
+                   </div>
+                 </div>
+                 <div class="mai__flex">
+                   <div class="field__info form__text1">
+                     <input id="datepicker" name="departureDate" type="text" placeholder="Departure Date" required="">
+                   </div>
+                   <div class="field__info form__text2">
+                     <input id="datepicker1" name="returnDate" type="text" placeholder="Return Date" required="">
+                   </div>
+                 </div>
+                 <div class="radio__section">
+                   <h6>Select your Fare</h6>
+                   <ul class="radio__buttons">
+                     <li>
+                       <input type="radio" id="a__option" name="selector1">
+                       <label for="a__option">One-Way</label>
+                       <div class="check"></div>
+                     </li>
+                     <li>
+                       <input type="radio" id="b__option" name="selector1">
+                       <label for="b__option">Round-Trip</label>
+                       <div class="check">
+                         <div class="inside"></div>
+                       </div>
+                     </li>
+                   </ul>
+                 </div>
+                 <input id="submitForm" type="submit" value="Submit">
+                 <input id="clearForm" type="reset" value="Clear">
+                 <div class="clear"></div>
+               </form>
+            </div>
+            </section>
+             <!--==================== WEATHER ====================-->
+            <section class="weather section" id="weather">
+                <div class="weather__container">
+                    <div class="weather__image">
+                        <img src="assets/img/weather.jpg" alt="weather image" class="weathere__img">
+                        <div class="weather__shadow"></div>
+                    </div>
+                    <div class="weather__content container grid">
+                        <div class="weather__data">
+                            <h2 class="section__title">
+                                Sunshine Or Showers <br> 
+                                We've Got You Covered
+                            </h2>
+                            <p class="weather__description">
+                                Stay informed about current conditions and anticipate your journey with a 
+                                five-day forecast. Never be caught off guard by unexpected weather changes 
+                                during your travels.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--==================== JOIN ====================-->
+            <section class="join section" id="join">
+                <div class="join__container container grid">
+                    <div class="join__data">
+                        <h2 class="section__title">
+                            Adventure <br>
+                            Is Out There
+                        </h2>
+                        <p class="join__description">
+                            Get up to date with the latest 
+                            travel and information from us.
+                        </p>
+                        <form action="" class="join__form">
+                            <input type="email" placeholder="Enter your email" class="join__input">
+                            <button class="join__button button">
+                                Subscribe To Our Newsletter <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="join__image">
+                        <img src="assets/img/venezuela.jpg" alt="join image" class="join__img">
+                        <div class="join__shadow"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div>
+                        <a href="#" class="footer__logo">SkyWatch</a>
+                        <p class="footer__description">
+                            Seamless Travel <br> 
+                            Planning Made Easy.
+                        </p>
+                    </div>
+                    <div class="footer__data grid">
+                        <div>
+                            <h3 class="footer__title">About</h3>
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#" class="footer__link">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Features</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">News & Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="footer__title">Company</h3>
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#" class="footer__link">FAQs</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">History</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Testimonials</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="footer__title">Contact</h3>
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#" class="footer__link">Call Center</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Support Center</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="footer__title">Support</h3>
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#" class="footer__link">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Terms & Services</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Payments</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__group">
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
+                            <i class="ri-facebook-line"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                    <span class="footer__copy">
+                        &#169; Copyright Skywatch. All rights reserved
+                    </span>
+                </div>
+            </div>
+        </footer>
+        <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line"></i>
+        </a>
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <!--=============== GOOGLE MAPS ===============-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUtyZpVeE9yq_3LO-jGwp8iQ-44QDlD1M&libraries=places&callback=initMap" async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUtyZpVeE9yq_3LO-jGwp8iQ-44QDlD1M&libraries=places"></script>
+        <!--=============== jQuery =====================-->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/flight.js"></script>
+        <script src="assets/js/weather.js"></script>
+    </body>
+</html>
