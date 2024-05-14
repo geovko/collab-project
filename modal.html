@@ -3,17 +3,18 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/flight.css">
     <link rel="stylesheet" href="assets/css/weather.css">
+    <style>
+    </style>
     <title>SkyWatch Modal</title> 
-</head> 
+</head>
+<script src="assets/script/modal.js"></script> 
 <body> 
     <header>
-        <a href="#" id="createPostBtn"> Popup my Modal </a>
+        <a href="#" id="myModal"> Popup my Modal </a>
     </header> 
     <main class="bookingDetailsContainer"> 
         <div id="popupModal" class="modal"> 
             <div class="modal-content"> 
-
-
                     <div class="booking-form">
                     <span class="close" id="closeModal">×</span>                         
                        <form action="#" method="post">
@@ -58,7 +59,6 @@
                          <div class="clear"></div>
                        </form>
                     </div>
-
                     <div class="upper"> 
                         <div class="title"> 
                         </div> 
@@ -69,29 +69,5 @@
     <footer> 
     <p>SkyWatch</p> 
     </footer> 
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function () { 
-        const popupModal =  
-            document.getElementById('popupModal'); 
-        const closeModal =  
-            document.getElementById('closeModal'); 
-        const postContainer =  
-            document.querySelector('.bookingDetailsContainer'); 
-        
-        createPostBtn.addEventListener('click', function () { 
-            popupModal.style.display = 'flex'; 
-        }); 
-      
-        closeModal.addEventListener('click', function () { 
-            // Add fadeOut class 
-            popupModal.classList.add('fadeOut'); 
-            setTimeout(() => { 
-                popupModal.style.display = 'none'; 
-                // Remove fadeOut class 
-                popupModal.classList.remove('fadeOut'); 
-            }, 500); 
-        }); 
-    }); </script> 
 </body> 
 </html>
