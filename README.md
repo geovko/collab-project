@@ -1,13 +1,23 @@
 # SkyWatch
 
+
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+SkyWatch is a comprehensive web application tailored to enhance the travel planning experience for users worldwide. By seamlessly integrating real-time flight 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+tracking and detailed airport weather updates, SkyWatch empowers travelers with the information they need to make informed decisions and navigate their journeys 
+
+with confidence.
+
+
+Motivation: The inspiration behind SkyWatch stems from the recognition of the challenges and uncertainties travelers face when planning and embarking on trips. 
+
+From unpredictable flight delays to unpredictable weather conditions, these factors can significantly impact travel experiences and create unnecessary stress for 
+
+users. SkyWatch aims to address these pain points by providing a centralized platform where users can access up-to-date flight information and weather forecasts, 
+
+enabling them to proactively plan and manage their travels effectively.
+
 
 ## Table of Contents
 
@@ -18,7 +28,7 @@ Provide a short description explaining the what, why, and how of your project. U
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+No installation is required, this application will run on any browser.
 
 [Take me to SkyWatch!](https://geovko.github.io/skyWatch/)
 
