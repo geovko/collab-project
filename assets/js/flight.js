@@ -31,5 +31,5 @@ const optionsTwo = {
   fields: ["address_components", "geometry", "icon", "name"],
   strictBounds: false,
 };
-const autocompleteTwo = new google.maps.places.Autocomplete(inputTwo, options);
+const autocompleteTwo = new google.maps.places.Autocomplete(inputTwo, optionsTwo);
 //============GOOGLE AUTOCOMPLETE END=============//
