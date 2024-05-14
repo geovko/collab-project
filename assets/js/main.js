@@ -94,3 +94,26 @@ sr.reveal(`.home__card`, {delay: 600, distance: '100px', interval: 100})
 sr.reveal(`.about__data, .join__image`, {origin: 'right'})
 sr.reveal(`.about__image, .join__data`, {origin: 'left'})
 sr.reveal(`.popular__card`, {interval: 200})
+
+//Script for MODAL POPUP
+
+    document.addEventListener('DOMContentLoaded', function () { 
+        const popupModal =  
+            document.getElementById('popupModal'); 
+        const closeModal =  
+            document.getElementById('closeModal'); 
+        const postContainer =  
+            document.querySelector('.bookingDetailsContainer'); 
+        
+        myModal.addEventListener('click', function () { 
+            popupModal.style.display = 'flex'; 
+        }); 
+      
+        closeModal.addEventListener('click', function () { 
+            popupModal.classList.add('fadeOut'); 
+            setTimeout(() => { 
+                popupModal.style.display = 'none'; 
+                popupModal.classList.remove('fadeOut'); 
+            }, 500); 
+        }); 
+    }); 
