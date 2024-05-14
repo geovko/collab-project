@@ -46,7 +46,7 @@ Collaborators:
 
 Third-Party APIs:
 - [visualcrossing](https://www.visualcrossing.com/)
-- [aviationstack](https://aviationstack.com/)
+- [RapidAPI: Priceline.com Provider](https://rapidapi.com/tipsters/api/priceline-com-provider/)
 
 
 ## License
