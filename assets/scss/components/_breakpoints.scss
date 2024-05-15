@@ -14,7 +14,7 @@
 @media screen and (min-width: 576px){
    .home__container,
    .about__container,
-   .explore__content,
+   .weather__content,
    .join__container{
       grid-template-columns: 380px;
       justify-content: center;
@@ -43,11 +43,11 @@
       text-align: initial;
    }
 
-   .popular__container{
+   .fights__container{
       grid-template-columns: repeat(2, 240px);
    }
 
-   .explore__img{
+   .weather__img{
       width: 100vw;
    }
 
@@ -83,7 +83,7 @@
       }
    }
 
-   .popular__container{
+   .flights__container{
       grid-template-columns: repeat(3, 240px);
    }
 
@@ -158,7 +158,7 @@
       }
    }
 
-   .popular{
+   .flights{
       &__container{
          grid-template-columns: repeat(3, 300px);
          column-gap: 3rem;
@@ -172,7 +172,7 @@
       }
    }
 
-   .explore{
+   .weather{
       &__img{
          height: 600px;
       }

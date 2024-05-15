@@ -1,0 +1,529 @@
+/*============ MODAL =============*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*============ BROWSER STYLES =============*/
+body {
+  font-size: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+/*============ ELEMENT STYLES =============*/
+div,
+h2,
+h3,
+h6,
+form,
+label {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*============ LIST STYLES =============*/
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*============ CLEAR =============*/
+.clear {
+  clear: both;
+}
+
+/*============ BOOKING CONTAINER =============*/
+.booking__form {
+  box-sizing: border-box;
+  padding: 3em 3em;
+  background: rgba(0, 0, 0, 0.78);
+  width: 65%;
+  margin: 0 auto;
+}
+
+/*============ SUBHEADINGS =============*/
+h2.sub__heading,
+h3.sub__heading {
+  display: inline-block;
+  text-align: left;
+  font-size: 24px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 0.4em;
+  padding: 0px 25px 10px 0px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #0091cd;
+  font-family: "Raleway", sans-serif;
+}
+
+.radio__section {
+  text-align: left;
+  margin: 0.7em 0;
+}
+
+/*============ RADIO HEADING =============*/
+.radio__section h6 {
+  display: inline;
+  margin-top: 10px;
+  color: #0091cd;
+  font-size: 19px;
+  text-transform: capitalize;
+  margin-bottom: 0.7em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: "Raleway", sans-serif;
+}
+
+.radio__section ul {
+  display: inline;
+}
+
+.custom__fare {
+  display: inline-block;
+  margin-left: 20px; /* Adjust margin as needed */
+}
+
+/*============ RADIO BUTTTON =============*/
+.radio__buttons li input[type="radio"] {
+  cursor: pointer;
+}
+
+.radio__buttons li label {
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Raleway", sans-serif;
+}
+
+ul.radio__buttons li {
+  display: inline-block;
+  margin: 0em 2em;
+}
+
+/*============ INPUT FIELDS =============*/
+.booking__form input[type="text"],
+.booking__form input[type="email"],
+.booking__form textarea,
+select.form__control,
+input#datepicker {
+  width: 100%;
+  font-weight: 300;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  padding: 10px 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/*============ TEXTAREA STYLE =============*/
+.booking__form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.field__info {
+  margin-bottom: 1em;
+}
+
+.form__text {
+  width: 100%;
+}
+
+select.form__control option {
+  background: #000;
+}
+
+.booking__form input[type="submit"],
+.booking__form input[type="reset"] {
+  text-transform: capitalize;
+  background: #0091cd;
+  color: #fff;
+  padding: 0.5em 4em;
+  border: none;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-top: 1em;
+  float: left;
+  outline: none;
+  letter-spacing: 1px;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  transition: 0.5s all;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+}
+
+.booking__form input[type="submit"] {
+  margin-right: 1.5em;
+  background: #d2741c;
+}
+
+.booking__form input[type="submit"]:hover {
+  background: #0091cd;
+  color: #fff;
+}
+
+.booking__form input[type="reset"]:hover {
+  background: #d2741c;
+  color: #fff;
+}
+
+.booking__form ::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.booking__form :-moz-placeholder {
+  color: #fff;
+}
+
+.booking__form ::-moz-placeholder {
+  color: #fff;
+}
+
+.booking__form :-ms-input-placeholder {
+  color: #fff;
+}
+
+.booking__form label {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.83);
+  letter-spacing: 2px;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 5px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+/*============ MEDIA STYLE =============*/
+@media (max-width: 1440px) {
+  .booking__form {
+    width: 73%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .booking__form {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .booking__form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .booking__form {
+    width: 83%;
+    padding: 2em 2.2em;
+  }
+}
+
+@media (max-width: 1024px) {
+  h2.sub__heading,
+  h3.sub__heading {
+    font-size: 22px;
+    padding: 0px 20px 7px 0px;
+  }
+  .field__info {
+    margin-bottom: 0.8em;
+  }
+  .booking__form input[type="submit"],
+  .booking__form input[type="reset"] {
+    padding: 0.5em 3em;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 768px) {
+  h2.sub__heading,
+  h3.sub__heading {
+    font-size: 21px;
+    padding: 0px 15px 7px 0px;
+  }
+  .radio__section h6 {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+  }
+  ul.radio__buttons li {
+    margin: 0em 1em;
+  }
+}
+
+@media (max-width: 667px) {
+  h2.sub__heading,
+  h3.sub__heading {
+    font-size: 19px;
+    letter-spacing: 1.5px;
+  }
+  .booking__form {
+    width: 86%;
+    padding: 2em 2em;
+  }
+  .booking__form input[type="text"],
+  .booking__form input[type="email"],
+  .booking__form textarea,
+  select.form__control,
+  input#datepicker {
+    padding: 8px 10px;
+  }
+  .field__info {
+    margin-bottom: 0.9em;
+  }
+  h2.sub__heading,
+  h3.sub__heading {
+    margin-bottom: 0.6em;
+  }
+}
+
+@media (max-width: 640px) {
+  .booking__form input[type="submit"] {
+    margin-right: 0.7em;
+  }
+}
+
+@media (max-width: 600px) {
+  .booking__form {
+    width: 90%;
+  }
+  .booking__form input[type="submit"],
+  .booking__form input[type="reset"] {
+    padding: 0.5em 2em;
+  }
+}
+
+@media (min-width: 481px) {
+  .main__flex {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .form__text1,
+  .form__text2 {
+    flex-basis: 48.5%;
+    -webkit-flex-basis: 48.5%;
+  }
+}
+
+@media (min-width: 737px) {
+  .triple__three {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .form__text11,
+  .form__text22,
+  .form__text33 {
+    flex-basis: 32%;
+    -webkit-flex-basis: 32%;
+  }
+}
+
+@media (max-width: 480px) {
+  ul.radio__buttons li {
+    margin: 0em 0.5em;
+  }
+  .radio__section {
+    margin: 1.3em 0 0.7em;
+  }
+  .booking__form {
+    width: 85%;
+  }
+  ul.radio__buttons li {
+    margin: 1em 0em 0em 0.2em;
+    display: block;
+  }
+  .booking__form input[type="submit"],
+  .booking__form input[type="reset"] {
+    font-size: 1em;
+  }
+  .booking__form textarea {
+    height: 60px;
+  }
+  .radio__section {
+    margin: 1em 0 0.7em;
+  }
+}
+
+@media (max-width: 414px) {
+  .booking__form {
+    width: 90%;
+  }
+  .booking__form {
+    width: 90%;
+    padding: 1.5em 1.7em;
+  }
+}
+
+@media (max-width: 384px) {
+  .booking__form input[type="submit"],
+  .booking__form input[type="reset"] {
+    float: none;
+  }
+  .booking__form input[type="submit"] {
+    margin-right: 0em;
+  }
+}
+
+@media (max-width: 320px) {
+  .booking__form {
+    width: 93%;
+    padding: 1.3em 1.5em;
+  }
+  h2.sub__heading,
+  h3.sub__heading {
+    font-size: 18px;
+    letter-spacing: 1.4px;
+    padding: 0px 12px 5px 0px;
+  }
+}
+
+/* Custom CSS for datepicker to reflect modal styles */
+.ui-datepicker {
+  display: none; /* Hide datepicker by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 1); /* Background color */
+}
+
+.ui-datepicker-content {
+  margin: 10% auto; /* Center the datepicker */
+  width: 100%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17); /* Box shadow */
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.ui-datepicker-header {
+  background: rgba(0, 0, 0, 1); /* Header background color */
+  padding: 15px;
+  color: #fff;
+}
+
+.ui-datepicker-body {
+  padding: 10px 20px;
+  background: #fff; /* Body background color */
+}
+
+.ui-datepicker-header h2,
+.ui-datepicker-footer h3 {
+  margin: 0;
+}
+
+.ui-datepicker-footer {
+  background: rgba(0, 0, 0, 1); /* Footer background color */
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.ui-datepicker-close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+
+.ui-datepicker-close:hover,
+.ui-datepicker-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+   <html lang="en">
    <head>
       <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-      <!--===============jQuery==============-->
-      <link rel="stylesheet" 
-      href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/main.css">
-      <link rel="stylesheet" href="assets/css/flight.css">
-      <link rel="stylesheet" href="assets/css/weather.css">
+      <link rel="stylesheet" href="assets/css/flights.css">
+
       <title>SkyWatch</title>
-      <script src="assets/js/modal.js"></script> 
    </head>
-   
    <body>
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
          <nav class="nav container">
             <a href="#" class="nav__logo">SkyWatch</a>
+
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
                   <li class="nav__item">
@@ -33,142 +29,87 @@
                   <li class="nav__item">
                      <a href="#about" class="nav__link">About</a>
                   </li>
+
                   <li class="nav__item">
                      <a href="#flights" class="nav__link">Flights</a>
                   </li>
+
                   <li class="nav__item">
                      <a href="#weather" class="nav__link">Weather</a>
                   </li>
+
+                  <li class="nav__item">
+                     <a href="#join" class="nav__link">Join</a>
+                  </li>
                </ul>
+
                <!-- Close button -->
                <div class="nav__close" id="nav-close">
                   <i class="ri-close-line"></i>
                </div>
             </div>
+
             <!-- Toggle button -->
             <div class="nav__toggle" id="nav-toggle">
                <i class="ri-menu-line"></i>
             </div>
          </nav>
       </header>
+
       <!--==================== MAIN ====================-->
       <main class="main">
          <!--==================== HOME ====================-->
          <section class="home section" id="home">
-            <img src="assets/img/home-bg.jpg" alt="home image" class="home__bg">
+            <img src="./assets/images/home.jpg" alt="home image" class="home__bg">
             <div class="home__shadow"></div>
+
             <div class="home__container container grid">
                <div class="home__data">
                   <h3 class="home__subtitle">
                      Welcome To SkyWatch
                   </h3>
+
                   <h1 class="home__title">
                      Explore <br>
                      The World
                   </h1>
+
                   <p class="home__description">
-                     Make informed decisions, adapt seamlessly to changes, and ensure 
-                     a smoother, more enjoyable travel experience. 
+                     Make informed decisions, adapt seamlessly 
+                     to changes, and ensure a smoother, more 
+                     enjoyable travel experience.
                   </p>
-                  <a href="#" id="myModal" class="button">
-                     Start Your Journey <i class="ri-arrow-right-line"></i>
-                  </a>
+
                </div>
-
-
-<!-- start modal -->
-               <main class="bookingDetailsContainer"> 
-                  <div id="popupModal" class="modal"> 
-                      <div class="modal-content"> 
-                              <div class="booking-form">
-                              <span class="close" id="closeModal">×</span>                         
-                                 <form action="#" method="post">
-                                   <h2 class="sub-heading">Booking Details</h2>
-                                   <div class="main-flex-w3ls-sectns">
-                                     <div class="field-info form-text1">
-                                       <input id="startLocation" type="text" name="from" placeholder="From" required="">
-                                     </div>
-                                     <div class="field-info form-text2">
-                                       <input id="endLocation" type="text" name="to" placeholder="To" required="">
-                                     </div>
-                                   </div>
-                                   <div class="main-flex">
-                                     <div class="field-info-spc form-text1">
-                                       <input id="datepicker" name="departureDate" type="text" placeholder="Departure Date" required="">
-                                     </div>
-                                     <div class="field-info form-text2">
-                                       <input id="datepicker1" name="returnDate" type="text" placeholder="Return Date" required="">
-                                     </div>
-                                   </div>
-                               
-                                   <div class="radio-section">
-                                     <h6>Select your Fare</h6>
-                                     <ul class="radio-buttons-w3-agileits">
-                                       <li>
-                                         <input type="radio" id="a-option" name="selector1">
-                                         <label for="a-option">One Way</label>
-                                         <div class="check"></div>
-                                       </li>
-                                       <li>
-                                         <input type="radio" id="b-option" name="selector1">
-                                         <label for="b-option">Round-Trip</label>
-                                         <div class="check">
-                                           <div class="inside"></div>
-                                         </div>
-                                       </li>
-                                     </ul>
-                                     <div class="clear"></div>
-                                   </div>
-                                   <input id="submitForm" type="submit" value="Submit">
-                                   <input id="clearForm" type="reset" value="Clear Form">
-                                   <div class="clear"></div>
-                                 </form>
-                              </div>
-                              <div class="upper"> 
-                                  <div class="title"> 
-                                  </div> 
-                              </div> 
-                      </div> 
-                  </div> 
-<!-- end modal -->
-
-
-
-
-
 
                <div class="home__cards grid">
                   <article class="home__card">
-                     <a href="https://www.google.com/search?q=places+to+travel+in+south+korea">
-                        <img src="assets/img/korea.jpg" alt="home image" class="home__card-img">  
-                        <h3 class="home__card-title">Korea</h3>
-                        <div class="home__card-shadow"></div>
-                     </a>
+                     <img src="./assets/images/china.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">China</h3>
+                     <div class="home__card-shadow"></div>
                   </article>
+
                   <article class="home__card">
-                     <a href="https://www.google.com/search?q=places+to+travel+in+norway">
-                        <img src="assets/img/norway.jpg" alt="home image" class="home__card-img">
-                        <h3 class="home__card-title">Norway</h3>
-                        <div class="home__card-shadow"></div>
-                     </a>
+                     <img src="./assets/images/jordan.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">Jordan</h3>
+                     <div class="home__card-shadow"></div>
                   </article>
+
                   <article class="home__card">
-                     <a href="https://www.google.com/search?q=places+to+travel+in+uae">
-                        <img src="assets/img/uae.jpg" alt="home image" class="home__card-img">
-                        <h3 class="home__card-title">UAE</h3>
-                        <div class="home__card-shadow"></div>
-                     </a>
+                     <img src="./assets/images/brazil.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">Brazil</h3>
+                     <div class="home__card-shadow"></div>
                   </article>
+
                   <article class="home__card">
-                     <a href="https://www.google.com/search?q=places+to+travel+in+spain">
-                        <img src="assets/img/spain.jpg" alt="home image" class="home__card-img">
-                        <h3 class="home__card-title">Spain</h3>
-                        <div class="home__card-shadow"></div>
-                     </a>
+                     <img src="./assets/images/peru.jpg" alt="home image" class="home__card-img">
+                     <h3 class="home__card-title">Peru</h3>
+                     <div class="home__card-shadow"></div>
                   </article>
                </div>
             </div>
          </section>
+
          <!--==================== ABOUT ====================-->
          <section class="about section" id="about">
             <div class="about__container container grid">
@@ -177,30 +118,224 @@
                      Learn More <br>
                      About SkyWatch
                   </h2>
+
                   <p class="about__description">
-                     SkyWatch is a comprehensive web application 
-                     tailored to enhance the travel planning experience 
-                     for users worldwide. By seamlessly integrating 
-                     real-time flight tracking and detailed airport 
-                     weather updates, SkyWatch empowers travelers with 
-                     the information they need to make informed decisions
-                      and navigate their journeys with confidence.
+                     The inspiration behind SkyWatch stems from the 
+                     recognition of the challenges and uncertainties 
+                     travelers face when planning and embarking on 
+                     trips. From unpredictable flight delays to 
+                     unpredictable weather conditions, these factors 
+                     can significantly impact travel experiences and 
+                     create unnecessary stress for users. SkyWatch aims 
+                     to address these pain points by providing a 
+                     centralized platform where users can access up-to-date 
+                     flight information and weather forecasts, enabling 
+                     them to proactively plan and manage their travels effectively.
                   </p>
+
                </div>
+
                <div class="about__image">
-                  <img src="assets/img/about.jpg" alt="about image" class="about__img">
+                  <img src="./assets/images/about.jpg" alt="about image" class="about__img">
                   <div class="about__shadow"></div>
                </div>
             </div>
          </section>
-      
+
+         <!--==================== FLIGHTS ====================-->
+         <section class="flights section" id="flights">
+            <h2 class="section__title">
+               Search For Your <br>
+               Destination
+            </h2>
+
+            <div class="flights__container container grid">
+               <article class="flights__card">
+                  <div class="flights__image">
+                     <img src="./assets/images/mexico.jpeg" alt="flights image" class="flights__img">
+                     <div class="flights__shadow"></div>
+                  </div>
+
+                  <h2 class="flights__title">
+                     Chichen Itza
+                  </h2>
+
+                  <div class="flights__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>Mexico</span>
+                  </div>
+               </article>
+
+               <article class="flights__card">
+                  <div class="flights__image">
+                     <img src="./assets/images/italy.jpg" alt="flights image" class="flights__img">
+                     <div class="popular__shadow"></div>
+                  </div>
+
+                  <h2 class="flights__title">
+                     Colosseum   
+                  </h2>
+
+                  <div class="flights__location">
+                     <i class="ri-map-pin-line"></i> 
+                     <span>Italy</span>
+                  </div>
+               </article>
+
+               <article class="flights__card">
+                  <div class="flights__image">
+                     <img src="./assets/images/india.jpeg" alt="flights image" class="flights__img">
+                     <div class="flights__shadow"></div>
+                  </div>
+
+                  <h2 class="flights__title">
+                     Taj Mahal
+                  </h2>
+
+                  <div class="flights__location">
+                     <i class="ri-map-pin-line"></i>
+                     <span>India</span>
+                  </div>
+               </article>
+
+               <div class="flights__button">
+                  <a href="" class="button" id="modal__button">
+                     Check Flights <i class="ri-arrow-right-line"></i>
+                  </a>
+               </div>
+
+               <!--==================== MODAL ====================-->
+                  <div class="modal" id="my__modal">
+                     <div class="modal__content">
+                        <div class="modal__header">
+                           <span class="close">&times;</span>
+                           <div class="booking__form">
+                              <form id="airlineBookingForm" action="" method="post">
+                                 <h2 class="sub__heading">Booking Details</h2>
+                                 <div class="main__flex">
+                                    <div class="field__info form__text1">
+                                       <input id="startLocation" type="text" name="from" placeholder="From" required="">
+                                    </div>
+                            
+                                    <div class="field__info form__text2">
+                                       <input id="endLocation" type="text" name="to" placeholder="To" required="">
+                                    </div>
+                                 </div>
+                    
+                                 <div class="main__flex">
+                                    <div class="field__info form__text1">
+                                       <input id="datepicker" name="departureDate" type="text" placeholder="Departure Date" required="">
+                                    </div>
+                    
+                                    <div class="field__info form__text2">
+                                       <input id="datepicker1" name="returnDate" type="text" placeholder="Return Date" required="">
+                                    </div>
+                                 </div>
+                    
+                                 <div class="triple__three">
+                                    <div class="field__info form__text11">
+                                       <input class="form__control" type="text" name="adults" placeholder="Adult(12+ Yrs)" required="">
+                                    </div>
+                                    <div class="field__info form__text22">
+                                       <input class="form__control" type="text" name="children" placeholder="Children(2-11 Yrs)" required="">
+                                    </div>
+                                    <div class="field__info form__text33">
+                                       <input class="form__control" type="text" name="infants" placeholder="Infant(under 2Yrs)" required="">
+                                    </div>
+                                 </div>
+                    
+                                 <div class="radio__section">
+                                    <h6>Duration</h6>
+                                    <ul class="radio__buttons">
+                                       <li>
+                                          <input type="radio" id="a__option" name="fareType" value="oneWay" required="">
+                                          <label for="a__option">One-Way</label>
+                                          <div class="check"></div>
+                                       </li>
+                    
+                                       <li>
+                                          <input type="radio" id="b__option" name="fareType" value="roundTrip" required="">
+                                          <label for="b__option">Round-Trip</label>
+                                          <div class="check">
+                                             <div class="inside"></div>
+                                          </div>
+                                       </li>
+                    
+                                       <div class="custom__fare">
+                                          <h6>Cabin</h6>
+                                          <ul class="radio__buttons">
+                                             <li>
+                                                <input type="radio" id="c__option" name="fareType" value="economy" required="">
+                                                <label for="c__option">Economy</label>
+                                                <div class="check"></div>
+                                             </li>
+                                          
+                                             <li>
+                                                <input type="radio" id="d__option" name="fareType" value="business" required="">
+                                                <label for="c__option">Business</label>
+                                                <div class="check"></div>
+                                             </li>
+                                
+                                             <li>
+                                                <input type="radio" id="e__option" name="fareType" value="firstClass" required="">
+                                                <label for="c__option">First</label>
+                                                <div class="check"></div>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </ul>
+                                 </div>
+                    
+                                 <input id="submitForm" type="submit" value="Submit">
+                                 <input id="clearForm" type="reset" value="Clear">
+                                 <div class="clear"></div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               
+            </div>
+         </section>
+         
+         <!--==================== WEATHER ====================-->
+         <section class="weather section" id="weather">
+            <div class="weather__container">
+               <div class="weather__image">
+                  <img src="./assets/images/weather.jpg" alt="weather image" class="weather__img">
+                  <div class="weather__shadow"></div>
+               </div>
+
+               <div class="weather__content container grid">
+                  <div class="weather__data">
+                     <h2 class="section__title">
+                        Sunshine Or Showers <br> 
+                        We've Got You Covered
+                     </h2>
+   
+                     <p class="weather__description">
+                        Stay informed about current conditions and anticipate 
+                        your journey with a five-day forecast. Never be caught 
+                        off guard by unexpected weather changes during your travels.
+                     </p>
+                  </div>
+
+                  <div class="weather__button">
+                     <a href="#" class="button">
+                        Check Weather <i class="ri-arrow-right-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
          <!--==================== JOIN ====================-->
-         <section class="join section">
+         <section class="join section" id="join">
             <div class="join__container container grid">
                <div class="join__data">
                   <h2 class="section__title">
                      Adventure <br>
-                     Is Out There
+                     Is Out There!
                   </h2>
 
                   <p class="join__description">
@@ -212,13 +347,13 @@
                      <input type="email" placeholder="Enter your email" class="join__input">
 
                      <button class="join__button button">
-                        Subscribe To Our Newsletter <i class="ri-arrow-right-line"></i>
+                        Subscribe Our Newsletter <i class="ri-arrow-right-line"></i>
                      </button>
                   </form>
                </div>
 
                <div class="join__image">
-                  <img src="assets/img/venezuela.jpg" alt="join image" class="join__img">
+                  <img src="./assets/images/join.jpg" alt="join image" class="join__img">
                   <div class="join__shadow"></div>
                </div>
             </div>
@@ -234,7 +369,7 @@
 
                   <p class="footer__description">
                      Seamless Travel <br> 
-                     Planning Made Easy.
+                     planning made easy.
                   </p>
                </div>
 
@@ -333,7 +468,7 @@
                </div>
 
                <span class="footer__copy">
-                  &#169; Copyright Skywatch. All rights reserved
+                  &#169; 2024 SkyWatch
                </span>
             </div>
          </div>
@@ -343,21 +478,19 @@
       <a href="#" class="scrollup" id="scroll-up">
          <i class="ri-arrow-up-line"></i>
       </a>
+      <!--=============== GOOGLE MAPS ===============-->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUtyZpVeE9yq_3LO-jGwp8iQ-44QDlD1M&libraries=places&callback=initMap" async defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUtyZpVeE9yq_3LO-jGwp8iQ-44QDlD1M&libraries=places"></script>
 
+      <!--=============== jQUERY ===============-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      
       <!--=============== SCROLLREVEAL ===============-->
       <script src="assets/js/scrollreveal.min.js"></script>
 
-      <!--=============== GOOGLE MAPS ===============-->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5-kk698A48xgX2Oe_M2YWVrgRVy6d5SU&libraries=places"></script>
-
-      <!--=============== jQuery =====================-->
-      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
-      <script src="assets/js/flight.js"></script>
-      <script src="assets/js/weather.js"></script>
-     
+      <script src="assets/js/flights.js"></script>
    </body>
 </html>
