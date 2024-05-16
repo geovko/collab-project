@@ -1,0 +1,37 @@
+<html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+<body>
+<title>FlightsBackend</title>
+<header>Testing Testing...</header>
+<p>Hiya! Check the console.</P>
+</body>
+<script>
+const flightType = 'ONE_WAY';
+const flightClass = 'ECO';
+const arrivalLoc = 'NYC';
+const departLoc = 'LON';
+const departDate = '2024-10-02';
+const returnDate = '2024-10-03';
+const passengers = '1';
+
+const settings = {
+	async: true,
+	crossDomain: true,
+	url: `https://priceline-com-provider.p.rapidapi.com/v1/flights/search?itinerary_type=${flightType}&class_type=${flightClass}&location_arrival=${arrivalLoc}&location_departure=${departLoc}&date_departure=${departDate}&sort_order=PRICE&date_departure_return=${returnDate}&number_of_passengers=${passengers}&price_min=100&price_max=20000`,
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'dba5bf0dd6msh430f1928362915fp11ae10jsnb87b31f34026',
+		'X-RapidAPI-Host': 'priceline-com-provider.p.rapidapi.com'
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+    for (i=0; i<response.data.listings.length; i++) {
+        console.log(`Departure Airline: ${response.data.listings[i].airlines[0].name}`);
+        console.log(`Price: ${response.data.listings[i].totalPriceWithDecimal.price}`);
+    }
+});
+</script>
+</html>
