@@ -11,10 +11,9 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/main.css">
       <link rel="stylesheet" href="assets/css/flights.css">
-      <link rel="stylesheet" href="assets/css/weatherWidget.css">
+
       <title>SkyWatch</title>
    </head>
-   <script src="assets/js/weatherWidget.js"></script>
    <body>
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
@@ -58,11 +57,7 @@
       </header>
 
       <!--==================== MAIN ====================-->
-
-
       <main class="main">
-
-
          <!--==================== HOME ====================-->
          <section class="home section" id="home">
             <img src="./assets/images/home.jpg" alt="home image" class="home__bg">
@@ -209,7 +204,7 @@
                   </a>
                </div>
 
-               <!--==================== MODAL ====================-->
+               <!--==================== FIRST MODAL ====================-->
                   <div class="modal" id="my__modal">
                      <div class="modal__content">
                         <div class="modal__header">
@@ -299,7 +294,18 @@
                         </div>
                      </div>
                   </div>
-               
+                  <!--==================== SECOND MODAL ====================-->
+                  <div class="modal" id="second__modal">
+                     <div class="modal__content">
+                        <div class="modal__header">
+                           <span class="close" id="closeSecondModal">&times;</span>
+                           <div class="second__modal__content">
+                              <!-- Content of the second modal goes here -->
+                              <p>This is the content of the second modal triggered by the submit button.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
             </div>
          </section>
          
@@ -320,31 +326,18 @@
    
                      <p class="weather__description">
                         Stay informed about current conditions and anticipate 
-                        your journey with our forecast. Never be caught 
+                        your journey with a five-day forecast. Never be caught 
                         off guard by unexpected weather changes during your travels.
                      </p>
                   </div>
 
                   <div class="weather__button">
-                     <a href="#" class="button" id="weatherWidget">
+                     <a href="#" class="button">
                         Check Weather <i class="ri-arrow-right-line"></i>
                      </a>
                   </div>
                </div>
             </div>
-            <div>
-           </div> 
-           <div class="weatherDetailsContainer"> 
-               <div id="popupModal2" class="modal2"> 
-                   <div class="modal2-content"> 
-                           <div class="weatherModal">
-                           <span class="close" id="closeModal2">×</span>                         
-                              <form action="#weather" method="post">
-                                <div class="weatherWidget" style="width: 442px"></div>
-                           </div> 
-                   </div> 
-               </div> 
-           </div> 
          </section>
          
          <!--==================== JOIN ====================-->

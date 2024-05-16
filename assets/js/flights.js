@@ -53,7 +53,7 @@ function initMap() {
   autocomplete.bindTo('bounds', map);
 }
 
-//============ MODAL =============//
+//============ FIRST MODAL =============//
 // Get DOM Elements
 const modal = document.querySelector('#my__modal');
 const modalBtn = document.querySelector('#modal__button');
@@ -90,3 +90,41 @@ $(document).ready(function() {
       openModal();
   });
 });
+
+//============ SECOND MODAL =============//
+// Get DOM Elements for the second modal
+const secondModal = document.querySelector('#second__modal');
+const closeSecondBtn = document.querySelector('#closeSecondModal');
+
+// Event listeners for the second modal
+closeSecondBtn.addEventListener('click', closeSecondModal);
+window.addEventListener('click', outsideClickSecond);
+
+// Open the second modal
+function openSecondModal() {
+    secondModal.style.display = 'block';
+}
+
+// Close the second modal
+function closeSecondModal() {
+    secondModal.style.display = 'none';
+}
+
+// Close the second modal if clicked outside
+function outsideClickSecond(e) {
+    if (e.target == secondModal) {
+        secondModal.style.display = 'none';
+    }
+}
+
+$(document).ready(function() {
+    // When the button inside the first modal is clicked
+    $("#submitForm").click(function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+        // Your code to open the second modal here
+        openSecondModal();
+    });
+});
+
+

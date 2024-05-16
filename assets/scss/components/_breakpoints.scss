@@ -43,7 +43,7 @@
       text-align: initial;
    }
 
-   .fights__container{
+   .flights__container{
       grid-template-columns: repeat(2, 240px);
    }
 
@@ -184,7 +184,7 @@
       &__data .section__title{
          text-align: initial;
       }
-      &__user{
+      &__button{
          justify-content: flex-end;
          align-self: flex-end;
          margin-bottom: 1.25rem;
