@@ -11,9 +11,10 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/main.css">
       <link rel="stylesheet" href="assets/css/flights.css">
-
+      <link rel="stylesheet" href="assets/css/weatherWidget.css">
       <title>SkyWatch</title>
    </head>
+   <script src="assets/js/weatherWidget.js"></script>
    <body>
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
@@ -57,7 +58,11 @@
       </header>
 
       <!--==================== MAIN ====================-->
+
+
       <main class="main">
+
+
          <!--==================== HOME ====================-->
          <section class="home section" id="home">
             <img src="./assets/images/home.jpg" alt="home image" class="home__bg">
@@ -321,12 +326,25 @@
                   </div>
 
                   <div class="weather__button">
-                     <a href="#" class="button">
+                     <a href="#" class="button" id="weatherWidget">
                         Check Weather <i class="ri-arrow-right-line"></i>
                      </a>
                   </div>
                </div>
             </div>
+            <div>
+           </div> 
+           <div class="weatherDetailsContainer"> 
+               <div id="popupModal2" class="modal2"> 
+                   <div class="modal2-content"> 
+                           <div class="weatherModal">
+                           <span class="close" id="closeModal2">×</span>                         
+                              <form action="#weather" method="post">
+                                <div class="weatherWidget" style="width: 442px"></div>
+                           </div> 
+                   </div> 
+               </div> 
+           </div> 
          </section>
          
          <!--==================== JOIN ====================-->
