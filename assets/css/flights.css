@@ -1,4 +1,4 @@
-/*============ MODAL =============*/
+/*============ FIRST MODAL =============*/
 .modal {
   display: none;
   position: fixed;
@@ -68,6 +68,39 @@
     opacity: 1;
   }
 }
+
+/*============ SECOND MODAL =============*/
+#second__modal {
+  display: none;
+  position: fixed; /* Position fixed so it stays in place even when scrolling */
+  z-index: 1001; /* Ensure it's above the first modal */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  top: calc(50% + 100px); /* Adjust this value to position it below the first modal */
+  width: 400px; /* Adjust width as needed */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Content */
+.second__modal__content {
+  padding: 20px;
+}
+
+/* Close Button */
+#closeSecondModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Other styles as needed */
+
+
+
 
 /*============ BROWSER STYLES =============*/
 body {

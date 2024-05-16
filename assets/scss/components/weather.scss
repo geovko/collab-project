@@ -1,5 +1,5 @@
 /*=============== WEATHER ===============*/
-.weather {
+.weather{
    position: relative;
 
    &__image{
@@ -30,18 +30,10 @@
       text-align: center;
       row-gap: 2.5rem;
    }
-   &__user{
+   &__button{
       display: inline-flex;
       align-items: center;
       justify-content: center;
       column-gap: .5rem;
-   }
-   &__perfil{
-      width: 30px;
-      border-radius: 50%;
-   }
-   &__name{
-      font-size: var(--small-font-size);
-      color: var(--title-color);
    }
 }
