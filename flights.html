@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/main.css">
+      <link rel="stylesheet" href="assets/css/flights.css">
+
+      <title>SkyWatch</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">SkyWatch</a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">Home</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link">About</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#flights" class="nav__link">Flights</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#weather" class="nav__link">Weather</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#join" class="nav__link">Join</a>
+                  </li>
+               </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+         </nav>
+      </header>
+      
+      <main class="main">
+         <section class="flights section" id="flights">
+            <div class="booking__form">
+               <form id="airlineBookingForm" action="#" method="post">
+                  <h2 class="sub__heading">Booking Details</h2>
+                  <div class="main__flex">
+                     <div class="field__info form__text1">
+                        <input id="startLocation" type="text" name="from" placeholder="From" required="">
+                     </div>
+                
+                     <div class="field__info form__text2">
+                        <input id="endLocation" type="text" name="to" placeholder="To" required="">
+                     </div>
+                  </div>
+        
+                  <div class="main__flex">
+                     <div class="field__info form__text1">
+                        <input id="datepicker" name="departureDate" type="text" placeholder="Departure Date" required="">
+                     </div>
+        
+                     <div class="field__info form__text2">
+                        <input id="datepicker1" name="returnDate" type="text" placeholder="Return Date" required="">
+                     </div>
+                  </div>
+        
+                  <div class="triple__three">
+                     <div class="field__info form__text11">
+                        <input class="form__control" type="text" name="adults" placeholder="Adult(12+ Yrs)" required="">
+                     </div>
+                     <div class="field__info form__text22">
+                        <input class="form__control" type="text" name="children" placeholder="Children(2-11 Yrs)" required="">
+                     </div>
+                     <div class="field__info form__text33">
+                        <input class="form__control" type="text" name="infants" placeholder="Infant(under 2Yrs)" required="">
+                     </div>
+                  </div>
+         
+                  <div class="radio__section">
+                     <h6>Duration</h6>
+                     <ul class="radio__buttons">
+                        <li>
+                           <input type="radio" id="a__option" name="fareType" value="oneWay" required="">
+                           <label for="a__option">One-Way</label>
+                           <div class="check"></div>
+                        </li>
+        
+                        <li>
+                           <input type="radio" id="b__option" name="fareType" value="roundTrip" required="">
+                           <label for="b__option">Round-Trip</label>
+                           <div class="check">
+                              <div class="inside"></div>
+                           </div>
+                        </li>
+                
+                        <div class="custom__fare">
+                           <h6>Cabin</h6>
+                           <ul class="radio__buttons">
+                              <li>
+                                 <input type="radio" id="c__option" name="fareType" value="economy" required="">
+                                 <label for="c__option">Economy</label>
+                                 <div class="check"></div>
+                              </li>
+                           
+                              <li>
+                                 <input type="radio" id="d__option" name="fareType" value="business" required="">
+                                 <label for="c__option">Business</label>
+                                 <div class="check"></div>
+                              </li>
+                    
+                              <li>
+                                 <input type="radio" id="e__option" name="fareType" value="firstClass" required="">
+                                 <label for="c__option">First</label>
+                                 <div class="check"></div>
+                              </li>
+                           </ul>
+                        </div>
+                     </ul>
+                  </div>
+        
+                  <input id="submitForm" type="submit" value="Submit">
+                  <input id="clearForm" type="reset" value="Clear">
+                  <div class="clear"></div> 
+               </form>
+            </div>
+         </section>
+      </main>
+   
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <div class="footer__content grid">
+               <div>
+                  <a href="#" class="footer__logo">SkyWatch</a>
+
+                  <p class="footer__description">
+                     Seamless Travel <br> 
+                     planning made easy.
+                  </p>
+               </div>
+
+               <div class="footer__data grid">
+                  <div>
+                     <h3 class="footer__title">About</h3>
+
+                     <ul class="footer__links">
+                        <li>
+                           <a href="#" class="footer__link">About Us</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Features</a>
+                        </li>
+                        
+                        <li>
+                           <a href="#" class="footer__link">News & Blog</a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div>
+                     <h3 class="footer__title">Company</h3>
+
+                     <ul class="footer__links">
+                        <li>
+                           <a href="#" class="footer__link">FAQs</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">History</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Testimonials</a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div>
+                     <h3 class="footer__title">Contact</h3>
+
+                     <ul class="footer__links">
+                        <li>
+                           <a href="#" class="footer__link">Call Center</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Support Center</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Contact Us</a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div>
+                     <h3 class="footer__title">Support</h3>
+
+                     <ul class="footer__links">
+                        <li>
+                           <a href="#" class="footer__link">Privacy Policy</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Terms & Services</a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="footer__link">Payments</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+            <div class="footer__group">
+               <div class="footer__social">
+                  <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
+                     <i class="ri-facebook-line"></i>
+                  </a>
+
+                  <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                     <i class="ri-instagram-line"></i>
+                  </a>
+
+                  <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                     <i class="ri-twitter-line"></i>
+                  </a>
+
+                  <a href="https://www.youtube.com/" target="_blank" class="footer__social-link">
+                     <i class="ri-youtube-line"></i>
+                  </a>
+               </div>
+
+               <span class="footer__copy">
+                  &#169; 2024 SkyWatch
+               </span>
+            </div>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-line"></i>
+      </a>
+      <!--=============== GOOGLE MAPS ===============-->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUtyZpVeE9yq_3LO-jGwp8iQ-44QDlD1M&libraries=places&callback=initMap" async defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUtyZpVeE9yq_3LO-jGwp8iQ-44QDlD1M&libraries=places"></script>
+
+      <!--=============== jQUERY ===============-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/flights.js"></script>
+   </body>
+</html>

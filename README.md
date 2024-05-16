@@ -21,7 +21,7 @@ The following image shows the web application's appearance and functionality:
 
 ![alt text](./assets/images/screenshot.png)
 
-[Visit our website](https://haartmuhn.github.io/skywatch/)
+[Visit our website](https://geovko.github.io/skyWatch/)
 
 </div>
 
