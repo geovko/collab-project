@@ -8,12 +8,15 @@
 </body>
 <script>
 const flightType = 'ONE_WAY';
+    // ONE_WAY ROUND_TRIP
 const flightClass = 'ECO';
+    // ECO BUS PEC FST
 const arrivalLoc = 'NYC';
 const departLoc = 'LON';
 const departDate = '2024-10-02';
 const returnDate = '2024-10-03';
 const passengers = '1';
+const searchList = 10;
 
 const settings = {
 	async: true,
@@ -28,9 +31,21 @@ const settings = {
 
 $.ajax(settings).done(function (response) {
 	console.log(response);
-    for (i=0; i<response.data.listings.length; i++) {
-        console.log(`Departure Airline: ${response.data.listings[i].airlines[0].name}`);
-        console.log(`Price: ${response.data.listings[i].totalPriceWithDecimal.price}`);
+    console.log(`For a ${flightType} flight with ${flightClass} class`);
+    console.log(`Heading to ${arrivalLoc} from ${departLoc}`);
+    console.log(`Leaving on ${departDate} and returning back ${returnDate}`);
+    console.log(`Total Amount of Passengers: ${passengers}`);
+    for (i=0; i<searchList; i++) {
+        console.log(` Flight Number: ${response.data.listings[i].slices[0].segments[0].flightNumber}`);
+        console.log(` Airline: ${response.data.listings[i].airlines[0].name}`);
+        console.log(` Price: ${response.data.listings[i].totalPriceWithDecimal.price}`);
+        console.log('......');
+        console.log(` Departure Info: ${response.data.listings[i].slices[0].segments[0].departInfo.airport.name}`);
+        console.log(` Departure Time: ${response.data.listings[i].slices[0].segments[0].departInfo.time.dateTime}`);
+
+        console.log(` Arrival Info: ${response.data.listings[i].slices[0].segments[0].arrivalInfo.airport.name}`);
+        console.log(` Arrival Time: ${response.data.listings[i].slices[0].segments[0].arrivalInfo.time.dateTime}`);
+        console.log('========================');
     }
 });
 </script>
