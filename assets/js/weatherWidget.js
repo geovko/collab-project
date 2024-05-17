@@ -1,3 +1,5 @@
+//Document Element Targetting and Dynamically Generated HTML for the popup Modal and Weather Widget
+
 document.addEventListener('DOMContentLoaded', function () { weatherWidget
     const popupModal2 =  
         document.getElementById('popupModal2'); 
@@ -33,6 +35,8 @@ window.weatherWidgetConfig.push({
     showConditions:true
 });
 
+
+//Weather API and Off-Site Widget Style Sheet Information provided by Visual Crossing: https://www.visualcrossing.com/ "weather-api" and "weatherwidgets"
 (function() {
 var d = document, s = d.createElement('script');
 (function(global) {
