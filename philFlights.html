@@ -108,9 +108,7 @@ function getFlights() {
             const flightInfo = document.createElement('div');
             flightInfo.classList.add('box'); 
             
-            for (let j=0; j<flightData.length; j++) {
-                
-                
+            for (let j=0; j<flightData.length; j++) { 
                 const departureTime = flightData[j].departInfo.time.dateTime.split('T');
                 const arrivalTime = flightData[j].arrivalInfo.time.dateTime.split('T');
 

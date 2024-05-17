@@ -53,6 +53,8 @@ function initMap() {
   autocomplete.bindTo('bounds', map);
 }
 
+//============ FIRST MODAL =============//
+// Get DOM Elements
 const modal = document.querySelector('#my__modal');
 const modalBtn = document.querySelector('#modal__button');
 const closeBtn = document.querySelector('.close');
@@ -140,14 +142,14 @@ function getFlights() {
         generalInfo.append(div2);
         generalInfo.append(div3);
         generalInfo.append(div4);
-        
+
         ticket.append(generalInfo);
         const flightInfo = document.createElement('div');
         flightInfo.classList.add('box'); 
-        
+
         for (let j=0; j<flightData.length; j++) {
             console.log(response);
-            
+
             const departureTime = flightData[j].departInfo.time.dateTime.split('T');
             const arrivalTime = flightData[j].arrivalInfo.time.dateTime.split('T');
 
@@ -163,7 +165,7 @@ function getFlights() {
             div9.textContent = `Arrival: ${flightData[j].arrivalInfo.airport.name}`;
             const div10 = document.createElement('div');
             div10.textContent = `Date: ${arrivalTime[0]} at ${arrivalTime[1]}`;
-            
+
             flightInfo.append(div5);
             flightInfo.append(div6);
             flightInfo.append(div7);
