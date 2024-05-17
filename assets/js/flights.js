@@ -102,8 +102,8 @@ const flightClass = 'ECO';
     // ECO BUS PEC FST
 const arrivalLoc = 'NYC';
 const departLoc = 'LON';
-const departDate = '2024-10-02';
-const returnDate = '2024-10-03';
+const departDate = '2024-05-16';
+const returnDate = '2024-05-17';
 const passengers = '1';
 
 const searchList = 10;
