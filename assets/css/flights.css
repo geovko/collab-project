@@ -70,6 +70,7 @@
 }
 
 /*============ SECOND MODAL =============*/
+/*============ SECOND MODAL =============*/
 #second__modal {
   display: none;
   position: fixed; /* Position fixed so it stays in place even when scrolling */
@@ -95,10 +96,18 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+  color: #000; /* Set to a visible color, e.g., black */
+  font-size: 24px; /* Adjust size as needed */
+  font-weight: bold; /* Make it bold for better visibility */
+  z-index: 10; /* Ensure it is above other content */
+}
+
+/* Optional: Change color on hover for better UX */
+#closeSecondModal:hover {
+  color: #ff0000; /* Change to a different color on hover, e.g., red */
 }
 
 /* Other styles as needed */
-
 
 
 
