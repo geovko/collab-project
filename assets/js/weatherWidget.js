@@ -272,3 +272,23 @@ var WeatherForecastWidget=function(initConfig) {
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
+
+document.addEventListener('DOMContentLoaded', function () {
+    const weatherButton = document.getElementById('weatherWidget');
+    const popupModal2 = document.getElementById('popupModal2');
+    const closeModal2 = document.getElementById('closeModal2');
+
+    weatherButton.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default action of the anchor tag
+        popupModal2.style.display = 'flex';
+    });
+
+    closeModal2.addEventListener('click', function () {
+        popupModal2.classList.add('fadeOut');
+        setTimeout(() => {
+            popupModal2.style.display = 'none';
+            popupModal2.classList.remove('fadeOut');
+        }, 500);
+    });
+});
+
