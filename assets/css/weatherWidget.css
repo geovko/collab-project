@@ -2,7 +2,7 @@
     justify-content: center; 
 }   
 .modal2 { 
-    z-index: 1000; 
+    z-index: 1000;
     display: none; 
     position: fixed; 
     top: 0; 
@@ -12,9 +12,9 @@
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
     justify-content: center;
     align-items: center;
-    display: flex;
     animation: fadeIn 1.5s ease-in-out; 
-} 
+}
+
 .modal2-content { 
     width: 25%; /* Further reduced width */
     height: 15%; /* Further reduced height */
