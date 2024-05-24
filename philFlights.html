@@ -27,20 +27,32 @@
 </body>
 <script>
 
-const flightType = 'ROUND_TRIP';
-    // ONE_WAY ROUND_TRIP
-    // using round trip just outputs more information
-const flightClass = 'ECO';
-    // ECO BUS PEC FST
-let arrivalLoc = 'NYC';
-let departLoc = 'LON';
-const departDate = '2024-05-16';
-const returnDate = '2024-05-17';
-const passengers = '1';
 const searchList = 10;
 const rapidApiKey = 'dba5bf0dd6msh430f1928362915fp11ae10jsnb87b31f34026'
+//localStorage.clear();
 
-function getAITA(city, dest) {
+function storeData() {
+    const flightCard = {
+        fromDate: '2024-10-23',
+        toDate: '2024-10-27',
+        fromLoc: 'NYC',
+        toLoc: 'NYC',
+        class: 'ECO',
+        type: 'ROUND_TRIP',
+        passengers: 1
+    }
+    // ONE_WAY || ROUND_TRIP
+    // ECO || BUS || PEC || FST
+    
+    let flight = JSON.parse(localStorage.getItem('flight'));
+    if (flight == null || flight == '') {
+        flight = flightCard;
+    }
+    localStorage.setItem('flight', JSON.stringify(flight));
+    return;
+}
+
+function getIataFrom(city) {
     const settings = {
         async: true,
         crossDomain: true,
@@ -52,26 +64,64 @@ function getAITA(city, dest) {
         }
     };
 
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-        console.log(response.data[0].iata_code);
-        localStorage.setItem(dest, JSON.stringify(response.data[0].iata_code));
+    $.ajax(settings).done(function (response) {        
+        for (i=0; i<response.data.length; i++) {
+            if (response.data[i].iata_code !== "") {        
+                console.log(`Code: ${response.data[i].iata_code}`);
+
+                let flight = JSON.parse(localStorage.getItem('flight'));
+                flight.fromLoc = response.data[i].iata_code;
+                localStorage.setItem('flight', JSON.stringify(flight));
+
+                return;
+            }
+        }
+        console.log(`No viable IATA-coded airport near ${city}`);
+        return;
+    });
+}
+
+function getIataTo(city) {
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: `https://airports15.p.rapidapi.com/airports?name=${city}&page=1&page_size=10&sorted_by=icao`,
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': rapidApiKey,
+            'X-RapidAPI-Host': 'airports15.p.rapidapi.com'
+        }
+    };
+
+    $.ajax(settings).done(function (response) {        
+        for (i=0; i<response.data.length; i++) {
+            if (response.data[i].iata_code !== "") {                
+                console.log(`Code: ${response.data[i].iata_code}`);
+
+                let flight = JSON.parse(localStorage.getItem('flight'));
+                flight.toLoc = response.data[i].iata_code;
+                localStorage.setItem('flight', JSON.stringify(flight));
+                
+                return;
+            }
+        }
+        console.log(`No viable IATA-coded airport near ${city}`);
+        return;
     });
 }
 
 function getFlights() {
     const rootEl = document.querySelector('#exampleRoot');
-    getAITA('Tacoma', 'departure');
-    departLoc = JSON.parse(localStorage.getItem('departure'));
-    console.log(departLoc);
-    getAITA('Los Angeles', 'arrival');
-    arrivalLoc = JSON.parse(localStorage.getItem('arrival'));
-    console.log(arrivalLoc);
 
+    getIataFrom('Seattle');
+    getIataTo('Atlanta');
+
+    let flight = JSON.parse(localStorage.getItem('flight'));
+    
     const settings = {
         async: true,
         crossDomain: true,
-        url: `https://priceline-com-provider.p.rapidapi.com/v1/flights/search?itinerary_type=${flightType}&class_type=${flightClass}&location_arrival=${arrivalLoc}&location_departure=${departLoc}&date_departure=${departDate}&sort_order=PRICE&date_departure_return=${returnDate}&number_of_passengers=${passengers}&price_min=100&price_max=20000`,
+        url: `https://priceline-com-provider.p.rapidapi.com/v1/flights/search?itinerary_type=${flight.type}&class_type=${flight.class}&location_arrival=${flight.toLoc}&location_departure=${flight.fromLoc}&date_departure=${flight.fromDate}&sort_order=PRICE&date_departure_return=${flight.toDate}&number_of_passengers=${flight.passengers}&price_min=100&price_max=20000`,
         method: 'GET',
         headers: {
             'X-RapidAPI-Key': rapidApiKey,
@@ -79,9 +129,8 @@ function getFlights() {
         }
     };
 
-    console.log(settings.url);
-
     $.ajax(settings).done(function (response) {
+        console.log('GetFlights');
         console.log(response);
         
         for (let i=0; i<searchList; i++) {
@@ -89,16 +138,16 @@ function getFlights() {
             const ticket = document.createElement('div');
             ticket.classList.add('flight-ticket'); 
             const generalInfo = document.createElement('div');
-            generalInfo.classList.add('box'); 
- 
+            generalInfo.classList.add('box');
+
             const div1 = document.createElement('div');
             div1.textContent = `Airline: ${response.data.listings[i].airlines[0].name}`;
             const div2 = document.createElement('div');
-            div2.textContent = `Class: ${flightClass}`;
+            div2.textContent = `Class: ${flight.class}`;
             const div3 = document.createElement('div');
             div3.textContent = `Price: $${response.data.listings[i].totalPriceWithDecimal.price}`;
             const div4 = document.createElement('div');
-            div4.textContent = `For: ${passengers} passenger(s), ${flightType}`;
+            div4.textContent = `For: ${flight.passengers} passenger(s), ${flight.type}`;
             generalInfo.append(div1);
             generalInfo.append(div2);
             generalInfo.append(div3);
@@ -138,6 +187,7 @@ function getFlights() {
     });
 }
 
+storeData();
 getFlights();
 </script>
 </html>
