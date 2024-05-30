@@ -83,3 +83,76 @@ sr.reveal(`.about__data, .join__image`, {origin: 'right'})
 sr.reveal(`.about__image, .join__data`, {origin: 'left'})
 sr.reveal(`.flights__card`, {interval: 200})
 
+$(function() {
+    //============ DATEPICKERS =============//
+    $("#datepicker, #datepicker1").datepicker({
+      minDate: 0 
+    });
+  
+     //============ BUTTON HANDLER =============//
+     $("input[name='fareType']").change(function() {
+      var selectedValue = $("input[name='fareType']:checked").val();
+      if (selectedValue === "oneWay") {
+        $("#datepicker1").datepicker("option", "disabled", true);
+      } else {
+        $("#datepicker1").datepicker("option", "disabled", false);
+      }
+    });
+  
+    // Call the initMap function to initialize Google Autocomplete
+    //initMap();
+});
+  
+  //============ GOOGLE AUTOCOMPLETE =============//
+  
+  
+  //============ FIRST MODAL =============//
+  // Get DOM Elements
+  const modal = document.querySelector('#my__modal');
+  const modalBtn = document.querySelector('#modal__button');
+  const closeBtn = document.querySelector('.close');
+  
+  // Events
+  //modalBtn.addEventListener('click', openModal);
+  //closeBtn.addEventListener('click', closeModal);
+  //window.addEventListener('click', outsideClick);
+  
+  // Open
+function openModal() {
+    modal.style.display = 'block';
+}
+  
+  // Close
+function closeModal() {
+    modal.style.display = 'none';
+}
+  
+  // Close If Outside Click
+function outsideClick(e) {
+    if (e.target == modal) {
+      modal.style.display = 'none';
+    }
+}
+  
+$(document).ready(function() {
+    // When the button is clicked
+    $("#modal__button").click(function(event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+        // Your code to open the modal here
+        openModal();
+    });
+
+    $("#submitForm").click(function(event) {
+        // Prevent the default form submission behavior
+        if (goingFrom.value == "" || goingTo.value == "" || departureDate.value == "" || arrivalDate.value == "" || party.value == "" || fareType == "" || cabinType == "") {
+          event.preventDefault();
+        } else {
+        // Your code to open the second modal here
+        //openSecondModal();
+        // code to get flight information here
+        //storeData();
+        //getFlights();
+        }
+    });
+});

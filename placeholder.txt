@@ -1,0 +1,64 @@
+//Need to place in main.js
+
+//============ GOOGLE AUTOCOMPLETE =============//
+const center = { lat: 50.064192, lng: -130.605469 };
+const defaultBounds = {
+  north: center.lat + 0.1,
+  south: center.lat - 0.1,
+  east: center.lng + 0.1,
+  west: center.lng - 0.1,
+};
+
+function initializeAutocomplete(id, bounds) {
+  const input = document.getElementById(id);
+  const options = {
+    bounds: bounds,
+    componentRestrictions: { country: "us" },
+    fields: ["address_components", "geometry", "icon", "name"],
+    strictBounds: false,
+  };
+  return new google.maps.places.Autocomplete(input, options);
+}
+
+const autocompleteStart = initializeAutocomplete("startLocation", defaultBounds);
+const autocompleteEnd = initializeAutocomplete("endLocation", defaultBounds);
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8
+  });
+
+  var input = document.getElementById('searchTextField');
+  var autocomplete = new google.maps.places.Autocomplete(input);
+
+  autocomplete.bindTo('bounds', map);
+}
+
+
+
+//============ SECOND MODAL =============//
+// Get DOM Elements for the second modal
+const secondModal = document.querySelector('#second__modal');
+const closeSecondBtn = document.querySelector('#closeSecondModal');
+
+// Event listeners for the second modal
+//closeSecondBtn.addEventListener('click', closeSecondModal);
+//window.addEventListener('click', outsideClickSecond);
+
+// Open the second modal
+function openSecondModal() {
+    secondModal.style.display = 'block';
+}
+
+// Close the second modal
+function closeSecondModal() {
+    secondModal.style.display = 'none';
+}
+
+// Close the second modal if clicked outside
+function outsideClickSecond(e) {
+    if (e.target == secondModal) {
+        secondModal.style.display = 'none';
+    }
+}
