@@ -315,6 +315,34 @@ select.form__control option {
   text-transform: capitalize;
 }
 
+.box {
+  padding: 18px;
+}
+
+.flight-ticket {
+  background-color: white;
+  color: black;
+  margin: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  border: outset 4px gray;
+  text-align: center;
+}
+
+.flights-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;;
+  flex-direction: row;
+}
+
+.general-info {
+  background-color: rgb(14, 44, 144);
+  color: white;
+}
+
 /*============ MEDIA STYLE =============*/
 @media (max-width: 1440px) {
   .booking__form {
